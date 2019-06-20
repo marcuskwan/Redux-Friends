@@ -1,7 +1,8 @@
-// create a reducer that will be passed as the rootReducer to `createStore`. Start with a pretty simple initialState object that has a `friends` property set as an empty array. Your state tree will grow pretty large as you build out more and more actions.
-
+// building initialState
 const initialState = {
+    // setting friends to empty array
   friends: []
 };
 
-const rootReducer = (state = initialState, action) => {};
+// making root reducer, accepts state and action as params
+export const rootReducer = (state = initialState, action) => {};

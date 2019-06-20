@@ -11,13 +11,21 @@ export class Login extends Component {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
   };
-  componentDidMount() {
-    login();
-  }
+
+  login = event => {
+    event.preventDefault();
+      this.props.login(this.state)
+          .then(res => {
+              if (res) {
+                this.props.history.push("/friends")
+            }
+        })
+  };
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.login}>
           <input
             onChange={this.handleChanges}
             name="username"

@@ -5,16 +5,22 @@ export class Login extends Component {
     username: "",
     password: ""
   };
+  handleChanges = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
   render() {
     return (
       <div>
         <form>
           <input
+            onChange={this.handleChanges}
             name="username"
             placeholder="username"
             value={this.state.username}
           />
           <input
+            onChange={this.handleChanges}
             name="password"
             placeholder="password"
             value={this.state.password}

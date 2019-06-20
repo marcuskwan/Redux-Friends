@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { login } from "../actions";
 
 export class Login extends Component {
   state = {
@@ -9,6 +11,9 @@ export class Login extends Component {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
   };
+  componentDidMount() {
+    login();
+  }
   render() {
     return (
       <div>
@@ -32,4 +37,12 @@ export class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = state => ({
+  error: state.error,
+  loggingIn: state.loggingIn
+});
+
+export default connect(
+  mapStateToProps,
+  { login }
+)(Login);

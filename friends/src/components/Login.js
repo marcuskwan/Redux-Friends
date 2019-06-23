@@ -14,14 +14,13 @@ export class Login extends Component {
 
   login = event => {
     event.preventDefault();
-      this.props.login(this.state)
-          .then(res => {
-              if (res) {
-                this.props.history.push("/friends")
-            }
-        })
+      this.props.login(this.state).then(res => {
+          if (res) {
+              this.props.history.push("/friends");
+          }
+      });
+    }
   };
-
   render() {
     return (
       <div>

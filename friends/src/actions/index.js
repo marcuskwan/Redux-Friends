@@ -13,13 +13,14 @@ export const login = credentials => dispatch => {
   dispatch({ type: LOGGING_IN });
   //   axiosWithAuth
   //     .post(`/login`, credentials)
+  // return
   return axios
     .post(`http://localhost:5000/api/login`, credentials)
     .then(res => {
       console.log(res);
       localStorage.setItem("token", res.data.payload);
       dispatch({ type: LOGIN_SUCCESS });
-      return true;
+      //   return true;
     })
     .catch(err => {
       console.log(err.response);

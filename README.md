@@ -2,33 +2,33 @@
 
 Topics:
 
-* React Router
-* Protected Routes
-* `axios` package
-* AJAX
-* Promises
-* Authentication tokens
+x* React Router
+x* Protected Routes
+x* `axios` package
+x* AJAX
+x* Promises
+x* Authentication tokens
 
 ## Project Description
 
-* Last week we built an app that interfaced with a `RESTful` API. That same project is now to be built using tokens for authentication.
-* Take your examples from the guided project and use them to build a more sophisticated application. Have fun!
-* Once your server is up and running, the URL you'll be able to hit from within your app is `http://localhost:5000`. You will however need an authentication header on all the calls except the login call.
-* Take a look at the endpoints that our API has to offer in `server.js`.
+x* Last week we built an app that interfaced with a `RESTful` API. That same project is now to be built using tokens for authentication.
+x* Take your examples from the guided project and use them to build a more sophisticated application. Have fun!
+x* Once your server is up and running, the URL you'll be able to hit from within your app is `http://localhost:5000`. You will however need an authentication header on all the calls except the login call.
+x* Take a look at the endpoints that our API has to offer in `server.js`.
 
-  * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
-  * **[GET]** to `/api/friends`: returns the list of friends.
-  * **[GET]** to `/api/friends/123`: returns the friend with the id passed as part of the URL (123 in example).
-  * **[POST]** to `/api/friends`: creates a friend and return the new list of friends. Pass the friend as the `body` of the request (the second argument passed to `axios.post`).
-  * **[PUT]** to `/api/friends/:id`: updates the friend using the `id` passed as part of the URL. Send the an object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
-  * **[DELETE]** to `/api/friends/123`: removes the friend using the `id` passed as part of the URL (123 in example).
+  x* **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
+  x* **[GET]** to `/api/friends`: returns the list of friends.
+  x* **[GET]** to `/api/friends/123`: returns the friend with the id passed as part of the URL (123 in example).
+  x* **[POST]** to `/api/friends`: creates a friend and return the new list of friends. Pass the friend as the `body` of the request (the second argument passed to `axios.post`).
+  x* **[PUT]** to `/api/friends/:id`: updates the friend using the `id` passed as part of the URL. Send the an object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
+  x* **[DELETE]** to `/api/friends/123`: removes the friend using the `id` passed as part of the URL (123 in example).
 
 ## Initialize Project
 
-* Run `yarn` or `npm i` inside the root directory of this project to install dependencies.
-* Run `yarn start` or `npm start` to start the API server.
-* Run `create-react-app friends` in a separate terminal window in the root directory of the project to create your starter application.
-* `cd` into the _friends_ folder and type `yarn add axios react-router-dom` which will install the needed dependencies.
+x* Run `yarn` or `npm i` inside the root directory of this project to install dependencies.
+x* Run `yarn start` or `npm start` to start the API server.
+x* Run `create-react-app friends` in a separate terminal window in the root directory of the project to create your starter application.
+x* `cd` into the _friends_ folder and type `yarn add axios react-router-dom` which will install the needed dependencies.
 
 ## Build the App!
 * Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like).
